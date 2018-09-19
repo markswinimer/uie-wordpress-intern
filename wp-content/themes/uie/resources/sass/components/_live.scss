@@ -1,0 +1,980 @@
+/*
+  Changes from mswinimer during adapting Jared Live, Meet The Interns and New UI into wordpress:
+
+  .page -> .livepage
+  ~To avoid conflict with uie theme
+
+*/
+
+@font-face {
+	font-family: "Source Sans Pro";
+	src: url("//asset.uie.com/fonts/source/sourcesanspro-regular-webfont.eot");
+	src: url("//asset.uie.com/fonts/source/sourcesanspro-regular-webfont.eot?#iefix") format("embedded-opentype"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-regular-webfont.woff2") format("woff2"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-regular-webfont.woff") format("woff"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-regular-webfont.ttf") format("truetype"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-regular-webfont.svg#source_sans_proregular") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Source Sans Pro";
+	src: url("//asset.uie.com/fonts/source/sourcesanspro-bold-webfont.eot");
+	src: url("//asset.uie.com/fonts/source/sourcesanspro-bold-webfont.eot?#iefix") format("embedded-opentype"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-bold-webfont.woff2") format("woff2"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-bold-webfont.woff") format("woff"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-bold-webfont.ttf") format("truetype"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-bold-webfont.svg#source_sans_probold") format("svg");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Source Sans Pro";
+	src: url("//asset.uie.com/fonts/source/sourcesanspro-it-webfont.eot");
+	src: url("//asset.uie.com/fonts/source/sourcesanspro-it-webfont.eot?#iefix") format("embedded-opentype"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-it-webfont.woff2") format("woff2"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-it-webfont.woff") format("woff"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-it-webfont.ttf") format("truetype"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-it-webfont.svg#source_sans_proit") format("svg");
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Source Sans Pro";
+	src: url("//asset.uie.com/fonts/source/sourcesanspro-boldit-webfont.eot");
+	src: url("//asset.uie.com/fonts/source/sourcesanspro-boldit-webfont.eot?#iefix") format("embedded-opentype"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-boldit-webfont.woff2") format("woff2"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-boldit-webfont.woff") format("woff"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-boldit-webfont.ttf") format("truetype"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-boldit-webfont.svg#source_sans_proboldit") format("svg");
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Source Sans Pro";
+	src: url("//asset.uie.com/fonts/source/sourcesanspro-semibold-webfont.eot");
+	src: url("//asset.uie.com/fonts/source/sourcesanspro-semibold-webfont.eot?#iefix") format("embedded-opentype"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-semibold-webfont.woff2") format("woff2"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-semibold-webfont.woff") format("woff"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-semibold-webfont.ttf") format("truetype"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold") format("svg");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Source Sans Pro";
+	src: url("//asset.uie.com/fonts/source/sourcesanspro-semiboldit-webfont.eot");
+	src: url("//asset.uie.com/fonts/source/sourcesanspro-semiboldit-webfont.eot?#iefix") format("embedded-opentype"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-semiboldit-webfont.woff2") format("woff2"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-semiboldit-webfont.woff") format("woff"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-semiboldit-webfont.ttf") format("truetype"),
+	     url("//asset.uie.com/fonts/source/sourcesanspro-semiboldit-webfont.svg#source_sans_prosemiboldit") format("svg");
+	font-weight: 600;
+	font-style: italic;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+	font: normal normal normal 1.125em/1.5 "Source Sans Pro", "Univers LT W01 55 Roman", "Helvetica Neue", Arial, sans-serif;
+	color: #313131;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Source Sans Pro", "Univers LT W01 65 Bold", "Helvetica Neue", Arial, sans-serif;
+	font-weight: bold;
+	margin: 0;
+	line-height: 1.2;
+}
+
+h2 {
+	color: #999;
+	border-bottom: 1px solid #ddd;
+	padding: 0.85em 16px 0.375em;
+	margin: 1em -16px 1em;
+	text-transform: uppercase;
+	font-size: 1em;
+	letter-spacing: 2px;
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 1.4em;
+}
+
+abbr {
+	font-size: 0.9375em;
+}
+
+a img {
+	border: none;
+}
+
+.normal {
+}
+
+p {
+	margin: 0.8em 0 0;
+}
+
+a {
+	color: #a73e3f;
+	text-decoration: none;
+	-webkit-transition: color 0.24s ease;
+	-moz-transition: color 0.24s ease;
+	transition: color 0.24s ease;
+}
+
+.transcript {
+	text-align:center;
+	font-size: 0.9em;
+}
+
+p:first-child {
+	margin-top: 0;
+}
+
+.live-page {
+	width: 952px;
+	margin: 0 auto;
+  padding-left: $stage-padding;
+  padding-right: $stage-padding;
+}
+
+@media screen and (min-width: 1px) {
+	.live-page {
+		max-width: 870px;
+		width: auto;
+		padding-left: $stage-padding;
+	  padding-right: $stage-padding;
+	}
+}
+
+.logo {
+	width: 110px;
+	display: block;
+}
+
+.logo img {
+	display: block;
+	width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+	.logo {
+		width: 115px;
+	}
+}
+
+.header {
+	background-color: $uie_main_red_color;
+	padding: 0.75em 0 0.25em;
+	color: #fff;
+}
+
+	.header h1 {
+		font-size: 2.5em;
+		margin: 0;
+	}
+
+	.header .live-page {
+		padding-top: 6px;
+		padding-bottom: 15px;
+	}
+
+.menu-toggle {
+	-webkit-transition: background-color 0.24s ease;
+	-moz-transition: background-color 0.24s ease;
+	transition: background-color 0.24s ease;
+	color: #e9cacc;
+	font-size: 1em;
+	float: right;
+	display: none;
+	padding: 0.5em 1em 0.4em;
+	margin-top: 0.5em;
+	background-color: $uie_sub_red_color;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+	.menu-toggle:hover {
+		background-color: #b64445;
+	}
+
+@media screen and (max-width: 500px) {
+	.menu-toggle {
+		margin-top: 0.5em;
+		font-size: 0.875em;
+	}
+}
+
+@media screen and (max-width: 860px) {
+	.menu-toggle {
+		display: block;
+	}
+}
+
+.footer {
+	background-color: #313131;
+	padding: 1.5em 1.5em 1.5em;
+	color: #fff;
+	margin-top: 2.5em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+	.footer p {
+		font-size: 0.875em;
+	}
+
+	.footer .logo {
+		margin: 0.25em 0 0 auto;
+	}
+
+	.footer a {
+		color: #bfbba0;
+	}
+
+	.footer a:hover {
+		color: #d0ca9e;
+	}
+
+@media screen and (max-width: 733px) {
+	.footer {
+		text-align: center;
+		padding: 1em 16px;
+	}
+
+	.footer .column {
+		width: auto !important;
+		float: none;
+		margin: 0;
+	}
+
+	.footer .logo {
+		margin: 0.25em auto 1em;
+	}
+}
+
+.nav {
+	background-color: $uie_sub_red_color;
+	font-size: 0.9375em;
+}
+
+	.nav .live-page {
+		display: block;
+	}
+
+	.nav a {
+		display: inline-block;
+		color: #fff;
+		line-height: 1;
+		margin: 0;
+		border-right: 1px solid $uie_main_red_color;
+		padding: 0.65em 1em 0.6em;
+		float: left;
+		-webkit-transition: background-color 0.24s ease;
+		-moz-transition: background-color 0.24s ease;
+		transition: background-color 0.24s ease;
+	}
+
+	.nav a:first-child {
+		border-left: 1px solid $uie_main_red_color;
+	}
+
+	.nav a:hover {
+		background-color: #b64445;
+	}
+
+@media screen and (max-width: 860px) {
+	.nav {
+		border-top: 8px solid #a73e3f;
+		overflow: hidden;
+	}
+
+	.nav .live-page {
+		margin: 0;
+		padding: 0;
+		display: none;
+	}
+
+	.nav a {
+		display: block;
+		float: none;
+		border-right: none;
+		border-top: 1px solid #bc4b4d;
+	}
+
+	.nav a:first-child {
+		border-left: none;
+		border-top: none;
+	}
+}
+
+
+.feature {
+	margin-bottom: 2em;
+	background: #191818 url("/wp-assets/img/jared-live/stage.jpg") no-repeat scroll 50% 60%;
+}
+
+	.feature .live-page {
+		position: relative;
+		height: 22em;
+	}
+
+	.feature a {
+		color: #b64445;
+	}
+
+		.feature a:hover {
+			color: #ce484a;
+		}
+
+.announce {
+	padding-top: 5.5em;
+	color: #fff;
+	overflow: hidden;
+}
+
+.announce h1 {
+	color: #fff;
+	font-size: 5em;
+	font-weight: normal;
+	line-height: 1;
+	margin: 0 0 0.375em;
+	font-family: "UniversLTW01-59UltraCn", Arial Narrow, sans-serif;
+}
+
+.announce ul {
+	list-style: none;
+	margin: 1.5em 0 0;
+	padding: 0;
+}
+
+.announce li {
+	float: left;
+}
+
+.announce .button, {
+	display: inline-block;
+	float: left;
+	margin-right: 1em;
+	color: #fff;
+	background-color: #a73e3f;
+	padding: 0.5em 0.8em 0.5em;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 1.125em;
+	-webkit-transition: background-color 0.24s ease;
+	-moz-transition: background-color 0.24s ease;
+	transition: background-color 0.24s ease;
+	-webkit-font-smoothing: antialiased;
+	font-weight: normal;
+}
+
+.announce .button:hover {
+	background-color: #b64445;
+	color: #fff;
+}
+
+.jared {
+	display: block;
+	width: 220px;
+	float: right;
+	position: absolute;
+	bottom: 0;
+	right: 2em;
+}
+
+@media screen and (max-width: 754px) {
+	.feature .live-page {
+		height: 18em;
+	}
+
+	.announce {
+		padding-top: 3em;
+	}
+
+	.announce h1 {
+		font-size: 3.5em;
+	}
+
+	.announce .button {
+		font-size: 1em;
+	}
+
+	.jared {
+		width: 180px;
+	}
+}
+
+@media screen and (max-width: 655px) {
+	.feature {
+		margin-bottom: 1em;
+		background-image: none;
+	}
+
+	.feature .live-page {
+		height: auto;
+	}
+
+	.announce {
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+
+	.announce p {
+		font-size: 0.875em
+	}
+
+	.announce h1 {
+		font-size: 2.75em;
+	}
+
+	.jared {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 400px) {
+
+	.announce .button {
+		font-size: 0.8125em;
+	}
+}
+
+
+.about-jared {
+	margin: 1em 0 1em;
+	position: relative;
+}
+
+.about-jared img {
+	display: block;
+	width: 100%;
+}
+
+	.about-jared img.small-screen {
+		display: none;
+		float: right;
+		margin: 0 0 0.5em 1em;
+	}
+
+@media screen and (max-width: 500px) {
+	.about-jared .eight.column {
+		width: auto !important;
+		margin-left: 0;
+	}
+
+	.about-jared img.large-screen {
+		display: none;
+	}
+
+	.about-jared img.small-screen {
+		float: right;
+		display: block;
+		width: 8em;
+	}
+}
+
+.get-in-touch {
+	padding: 1.25em 24px 1em;
+	margin: 2.4em -16px 1em;
+	background: #f1ede4;
+}
+
+.get-in-touch h2 {
+	font-size: 1.5em;
+	text-transform: none;
+	letter-spacing: 0;
+	border: none;
+	color: #313131;
+	margin: 0;
+	padding: 0;
+}
+
+.talk {
+	padding: 0.5em 16px 0.6em;
+	margin: 0.6em -16px 0;
+}
+
+.talk.first {
+	margin-top: -1em;
+}
+
+.talk ul {
+	margin: 1em 0 0;
+	padding-left: 1.25em;
+	list-style: square;
+}
+
+.talk li {
+	margin: 0.5em 0 0;
+}
+
+.talk li:first-child {
+	margin-top: 0;
+}
+
+.talk h3 {
+	font-size: 1.85em;
+	margin-bottom: 0.35em;
+	margin-top: 0.5em;
+}
+
+.talk .preview {
+	padding-top: 0.25em;
+	margin: 0 0 0.8em;
+}
+
+.talk .video {
+	-webkit-transition: background-color 0.24s ease;
+	-moz-transition: background-color 0.24s ease;
+	transition: background-color 0.24s ease;
+	text-align: center;
+	display: block;
+	padding: 0.6em 0.6em 0.5em;
+	margin: -0.6em -0.6em 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+	.talk .video:hover {
+		background-color: #f6f3f3;
+	}
+
+.talk .video span {
+	padding-bottom: 56.25%;
+	display: block;
+	margin-bottom: 0.8em;
+	background-color: #e2dddd;
+	height: 0;
+}
+
+.talk .video img {
+	width: 100%;
+	margin: 0 0 0.25em;
+}
+
+.talk h4 {
+
+}
+
+.talk h4 small {
+	display: block;
+	font-style: italic;
+}
+
+.book {
+	margin-top: 1.6em;
+}
+
+.book a {
+	-webkit-transition: background-color 0.24s ease;
+	-moz-transition: background-color 0.24s ease;
+	transition: background-color 0.24s ease;
+	display: block;
+	font-size: 1.3em;
+	background-color: $uie_sub_red_color;
+	font-weight: 500;
+	color: #fff;
+	text-align: center;
+	padding: 0.5em;
+	-webkit-border-radius: 0.125em;
+	-moz-border-radius: 0.125em;
+	border-radius: 0.125em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+	.book a:hover {
+		background-color: #b64445;
+	}
+
+.headshot {
+	width: 12em;
+	float: left;
+	margin: 0.5em 1em 1em 2em;
+	display: block;
+}
+
+.headshot .figure {
+	border-bottom: 3px solid #a73e3f;
+	display: block;
+	margin-bottom: 0.5em;
+}
+
+.headshot .figure img {
+	width: 90%;
+	margin: 0 auto;
+	display: block;
+}
+
+.headshot .figcaption {
+	display: block;
+	font-size: 0.875em;
+	line-height: 1.4;
+	text-align: center;
+	color: #b6787b;
+}
+
+	.headshot .figcaption strong {
+		color: #a73e3f;
+	}
+
+.timing {font-style: italic;}
+
+small.permalink {
+		font-size: 33%;
+		color: #111;
+		display: inline-block;
+		padding-left: 0.25em;
+	}
+small.permalink a {color: #CCC;}
+
+@media screen and (max-width: 800px) {
+	.talk h3 {
+		font-size: 1.8em;
+	}
+
+	.book a {
+		font-size: 1.125em;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.book a {
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.talk .column {
+		width: auto !important;
+		margin: 0 0 1.5em;
+		float: none;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.talk h3 {
+		font-size: 1.8em;
+	}
+}
+
+.go {
+	display: none;
+	width: 700px;
+	padding: 1em 1.5em 0.5em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+	.go h2 {
+		text-transform: none;
+		line-height: 1.3;
+		text-transform: none;
+		letter-spacing: 0;
+		font-size: 1.5em;
+		border: none;
+		color: #eee;
+		margin: 0;
+		padding: 0;
+	}
+
+	.go .contact-options {
+		width: 620px;
+		margin-top: 2.5em;
+	}
+
+.contact-options {
+	margin: 1.5em auto 1em;
+	text-align: center;
+}
+
+	.contact-options .boost {
+		display: block;
+		font-size: 1.85em;
+		line-height: 1.2;
+		margin-top: 1em;
+		letter-spacing: -0.5px;
+	}
+
+	.contact-options .boost:first-child {
+		margin-top: 0;
+	}
+
+	.contact-options .or {
+		display: block;
+		margin-top: 0.375em;
+	}
+
+	.contact-options small {
+		display: block;
+		color: #777;
+		font-size: 0.875em;
+		line-height: 1.25;
+		margin: 0.5em auto 0;
+		max-width: 230px;
+	}
+
+	.contact-options a {
+		color: #bd4243;
+	}
+
+		.contact-options a:hover {
+			color: #d45556;
+		}
+
+@media screen and (max-width: 800px) {
+	.go {
+		width: 540px;
+	}
+
+	.go .contact-options {
+		width: 100%;
+	}
+
+	.contact-options .boost {
+		font-size: 1.6em;
+	}
+}
+
+@media screen and (max-width: 670px) {
+	.go {
+		width: 420px;
+		font-size: 0.875em;
+		padding: 0.75em 1.25em;
+	}
+
+	.go h2 {
+		font-size: 1.2em;
+	}
+
+	.go .contact-options {
+		margin-top: 1em;
+	}
+
+	.contact-options .boost {
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 538px) {
+	.go {
+		width: 300px;
+		font-size: 0.875em;
+	}
+
+	.go .contact-options {
+		margin-top: 1.5em;
+		margin-bottom: 0;
+	}
+
+	.go .one-seventh.column {
+		display: none;
+	}
+
+	.go .column {
+		width: auto !important;
+		float: none;
+		margin: 1em 0 0;
+	}
+
+		.column:first-child {
+			margin-top: 0;
+		}
+}
+
+@media screen and (max-width: 520px) {
+	.get-in-touch .contact-options {
+		margin-top: 1em;
+		margin-bottom: 0.5em;
+	}
+
+	.get-in-touch .column {
+		width: auto !important;
+		float: none;
+		margin: 1em 0 0;
+	}
+
+		.get-in-touch .column:first-child {
+			margin-top: 0;
+		}
+}
+
+@media screen and (max-width: 400px) {
+	.go {
+		width: 240px;
+		padding: 0.5em 0.25em;
+	}
+}
+
+/* Code for Transcripts */
+
+#transcript {
+		background-color: #333333;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 100%;
+		line-height: 1.5em;
+		}
+
+#transcript h1 a {
+	color: #000000;
+	text-decoration:underline;
+}
+
+#transcript h1, #transcript h2, #transcript h3, #transcript h4, #transcript h5 {
+	padding-left:5%;
+	padding-right:5%;
+}
+
+#transcript h1 {font-size: 2em;
+	line-height: 1.2em;
+	margin-bottom:20px;
+	}
+ /* h1 = 24px ÷ 16 = 1.5em */
+ /* line height = 28.8 ÷ 16 */
+
+#transcript h2 {font-size: 1.3125em;
+	line-height: 1.575em;
+	font-weight: normal;
+	}
+ /* h2 = 21px ÷ 16 = 1.3125em */
+ /*  line height = 25.2px ÷ 16 = 1.575em */
+
+#transcript h3 {font-size: 1.125em;
+	line-height: 1em;
+	font-weight: normal;
+	margin-bottom:10px;
+	}
+ /* h3 = 18px ÷ 16 = 1.125em */
+
+#transcript h4 {font-size: 1em;
+	line-height: 1.2em;
+	}
+
+#transcript h5 {font-size: 0.875em;
+	line-height: 1.05em;}
+ /* h5 = 14px ÷ 16 = 0.875em */
+
+#transcript small{
+	padding-left:5%;
+	padding-right:5%;
+}
+
+#transcript #container {
+		background-color: white;
+		color: #000000;
+		margin: 40px auto;
+		padding: 2em;
+		max-width: 43.75em;		/* 700px / 16px = 43.75em */
+		 }
+
+#transcript div#header {
+		padding-bottom: 1em;
+		width: 100%
+			}
+
+#transcript div#header a {color: #000000;}
+
+#transcript #intro {
+		font-style: italic;
+		padding-bottom: 5px;
+		padding-top: 5px;
+
+		}
+
+#transcript #article {
+		border-top-color: #cccccc;
+		border-top-style: solid;
+		border-top-width: 1px;
+		padding-top: 0.75em;
+		line-height: 1.45em;
+		margin-bottom: 1em;
+		}
+
+#transcript #article strong{
+	font-weight:bold;
+}
+
+#transcript p {
+	padding-left:5%;
+	padding-right:5%;
+}
+
+#transcript p.speaker_2_text {
+		background-color: #eeeeee;
+		padding-top: 5px;
+		}
+
+#transcript p.speaker_3_text {
+		background-color: #ffffcc;
+		padding-top: 5px;
+		}
+#transcript p.speaker_4_text {
+		background-color: #FFD27F;
+		padding-top: 5px;
+		}
+
+#transcript p.speaker_5_text {
+		background-color: #ccccff;
+		padding-top: 5px;
+		}
+#transcript p.speaker_6_text {
+		background-color: #cccccc;
+		padding-top: 5px;
+		}
+
+@media screen and (max-width: 768px) {
+	#transcript #container{
+		margin:0 auto;
+	}
+	#transcript #article p, #transcript #intro{
+		line-height:2em;
+	}
+}
+
+@media screen and (max-width: 538px) {
+	#transcript #article p, #transcript #intro{
+		font-size:110%;
+	}
+	#transcript #container{
+		padding-left:1.2em;
+		padding-right:1.2em;
+	}
+}
+
+@media screen and (max-width: 470px) {
+	#transcript h1{
+		font-size:1.6em;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	#transcript{
+		background-color:#fff;
+	}
+	#transcript #container{
+		padding:10px;
+	}
+}

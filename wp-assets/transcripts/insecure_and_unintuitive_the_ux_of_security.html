@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+
+<title>Insecure &amp; Unintuitive: How We Need to Fix the UX of Security by Jared Spool</title>
+
+
+<link rel="stylesheet" type="text/css" href="../../wp-content/themes/uie/css/uie.css">
+
+</head>
+
+<body id="transcript">
+<div id="container">
+<div id="header">
+
+<h3>A Transcript of the talk…</h3>
+
+<h1><a href="http://www.uie.com/jared-live/#fix-ux-of-security">Insecure &amp; Unintuitive: How We Need to Fix the UX of&nbsp;Security</a></h1>
+
+<small>UX Immsersion: Interactions | May&nbsp;2017</small>
+
+</div> <!-- Closes "header" -->
+
+<div id="article">
+
+		<p>
+			<strong>Jared Spool:</strong> I want to talk about something that we never talk about in the UX world and that is designing for security and this all sort of starts with a dialogue box. It's a simple dialogue box. It has two fields, a couple of labels, a button, a link and a heading and this particular dialogue box is the most famous dialogue box in the world. Right, people see it dozens of times a day in some form or other. It's also the most varied comment dialogue box that we see. I mean it shows up in so many forms in so many ways and yet it is always just basically the same thing. It's the same pattern over and over and over again. I mean, sure, sometimes we can make it a little bit better. You can do that by just adding David Attenborough. Everything's better with David Attenborough, but it's basically always the same and yet this simple comment dialogue box coincidentally is also the most expensive dialogue box in the world.</p>
+		<p>
+			There's a bank in Australia that, at one point it was spending 75 million dollars a year for password resets, because people couldn't successfully use this form. People where calling in for password resets. One retailer that we worked with, was losing 300 million dollars a year in sales because people couldn't get through the checkout process because they were stopped by this form and were unable to continue. And nobody knows how many millions of dollars are lost in productivity because we don't have the right access or permission to the things that we need to get to, to do the work that we need to do. So all of these thing are extremely expensive, extremely difficult and what that means is that this is the most complicated dialogue box in the world. It has so many variations in business rules. The way we decide ... I mean it so uncommonly common in these business rules that we create all sorts of crazy to work around it.</p>
+		<p>
+			In doing research for this talk I discovered there's an entire industry of things you write your passwords down in. They're just huge. It's a big business. It just keeps going. My favorite being this book which is top secret, except to figure out who to give it back to, you have to open it up to read the name on the inside. It's crazy and I've come to the conclusion that this is the most judgemental dialogue box in the world. It is all about the shame and if we disobey we get locked out. This by the way is the lock screen from, of all things, tacobell.com. For which if you find yourself locked out of tacobell.com, it takes three to five business days to get it reset. I have no idea what the use case for that is. Creating a new account is often the first thing we ask our users to do. It's the first experience that they have. Logging in is the first action that they need to use our system.</p>
+		<p>
+			Security UX, which I have subsequently abbreviated into SUCKS, is the first experience. So in essence, it's not mobile first or content first, it's security first because that's the thing the user runs into first, and yet when do we talk about making it a designed experience? When do we talk about this? This is like the last thing we ever deal with. The thing is, it's real. What it's trying to do, is really important. Identity theft is a huge, huge problem right now. It turns out that we're always trying to make sure we can protect the data, the statistics on data breaches and cyber crime is just incredible and just increasing. Personal information is now an industry amongst the black market, with victims and losses being in the billions of dollars. Turns out that identity theft is now bigger than home theft, auto theft and personal property theft combined.</p>
+		<p>
+			And financial instruments, turns out that stolen credit cards are so common that their prices on the black market have been plummeting. You can buy a stolen credit card that's working, verified to work, for under 10 cents. So it's crazy, right? And the number of breaches that have happened have been huge. We hear about new ones all the time and finally, the key thing is, once you get access to one system, you can use that to get access to all the other systems that person uses and everything starts to get hacked. So who's doing this, right? Who are the hackers? Well, this is a question that a lot of people have tried to answer.</p>
+
+
+		<p>
+			<strong>(Video) President Trump:</strong> I don't think anybody knows it was Russia that broke into the DNC. She's saying Russia, Russia, Russia, but I don't ... maybe it was. I mean it could be Russia, but it could also be China. It could also be lots of other people. It also could be somebody sitting on their bed, that weighs 400 pounds.</p>
+
+
+		<p>
+			<strong>Jared:</strong> So that's what the President thinks, but the internet has a completely different idea. They think it's people wearing hoodies in binary fluorescent wallpaper. What's up with this guy? Does he not know that everybody is suppose to look like the emperor in Star Wars? Of course we all know who the real culprits are, and the victims of all of this. I mean if you just look at identity theft victims alone, and the list is incredible, this is just people who are famous that I was able to find. It's even gotten so far as affecting Oprah. I mean I get it. Everybody wants to be Oprah, but I don't think this is what they meant and this thing causes people to lose their jobs, sort of, sometimes. But it's actually quite serious. The office of Personal Management in the White House discovered that 21.5 people had their SF 86 records stolen. The SF 86 is the document is the document that people, except in the Trump administration, fill out to declare everything about their behavior and it has all of their contact information. It has social security numbers of all your family members, all your friends.</p>
+		<p>
+			It is this incredible wealth of data about everybody. You can use it to steal almost anything from anybody, once it's been stolen, and it was stolen. Suspected to be by the Chinese and so that's our new backup system. And you know, the State Department, their computers were hacked. No wonder you'd want to keep your email someplace else. Just saying. And this is a document from the National Institute of Health which, in addition to having creative kerning techniques, outlines the mandatory procedures for password protection. And so they have their rules about the complexity, how to change the passwords, how to make sure you get locked out in a certain amount of time, inactivity, sharing passwords, compromised passwords, even going so far as to talk about caching passwords and there's this paragraph right here that is stunning to me.</p>
+		<p>
+			"Users are prohibited from caching, auto saving passwords on the local system. Users must enter the password at each log in. Storing passwords in files on the user system is prohibited." So where are they going to store it, right? You have to change it every 30 days. It can't be anything like the last five passwords you've ever had, how do you remember it? Well, you do what everybody does. You put it on a sticky, and it turns out that there's been a bit of research done about this. There's this wonderful woman in the UK named Angela Sasse and Angela has, with her team, done some amazing research on this thing she calls The Compliance Budget.</p>
+		<p>
+			And The Compliance Budget is basically this idea that people have so much compliance to give, and then they stop. That people basically trade off the burden costs against the benefits. They're always saying, "Okay, I know that keeping this stuff secure is important, but I'm being asked to get this job done in a timely fashion, and that becomes a problem", and it's a huge problem. I mean it's so huge that it was recently reported by a study at Dartmouth that healthcare workers are neglecting security protocols in order to do their job. The folks at Dartmouth wrote this up and some of the report that they came up with is just incredible. I'm just going to read you a couple of things here.</p>
+		<p>
+			For example, "In one location all workers shared a single password which was written on a piece of tape stuck to the device and one vendor offers stickers that you use to write your username and password on and post to a computer monitor", as a promotional piece of swag. "Other healthcare workers where skilled at defeating proximity sensors that logged them out of their terminals when they got up from their workstations". These sensors were there to make sure that, when they got up to, for instance, bring a patient into the lab for another test, to make sure that they remembered to check to see if they'd changed the patient record so that the test results were going to against the right patient's record, and they would bypass this by doing things like putting styrofoam cups over the sensors or, my favorite, assigning the most junior staffer to press the space bar at timed intervals.</p>
+		<p>
+			Intern work I guess. And the thing is, is that these things were driven by the clinicians need to get their jobs done. They were claiming that they were not able to save and maintain the quality of life and medical care because of this and that IT was completely ignoring their needs. So this stuff is big. This is huge, and when we have poorly designed Security UX, it prevents people from getting their job done and in some cases that's a life and death proposition. So what this boils down to is a basic principal, that if it's not usable, it's not secure, and if you take nothing else from this, I want you to take this. If it's not usable, it's not secure. So, ladies and gentleman, please repeat after me, if it's not usable, it's not secure.</p>
+
+
+		<p>
+			<strong>Audience:</strong> If it's not usable, it's not secure.</p>
+
+
+		<p>
+			<strong>Jared:</strong> Good, you're going to need this, because this is how you talk to the folks who are making sure that we can't make a great design. I call them the people in the tinfoil hats, because they sit across the table and they say, "But we have to make it secure". So by turning to them and saying, "If it's not usable, it's not secure". Now, the thing is that these people have a very simplified model of the world. They think that the system has two states. Either you're not logged in, or you're logged in. That's it, and so this is how we design. We design with these two states. We're either in a not logged in state, which we just ... you can't do anything, or your logged in and you can get to everything, but this isn't how it needs to be. We can actually work with something better.</p>
+		<p>
+			When I bring up Amazon, it is not logged in. I haven't put in my password, I haven't even put in my username, yet it knows who I am. This is not, not logged in, but it's not logged in either and so here we are in this weird state. Now if I go from a machine that I've never used before, it doesn't do that, which is comforting, but there's obviously something going on here. Now I want to point out that all it knows is who I am and it knows that from a cookie that's been left on my machine from a previous use and that is identification. That's just the username part of the form. It keeps that. It doesn't keep the password actually, but what this means is, we now have a third state to the model. We have identified and not logged in. But Amazon takes this a step further, because I can go to a hugely expensive product and using 1-Click checkout, I can purchase this without ever entering my password.</p>
+		<p>
+			I can spend $20,000 on this lovely Canon camera without putting in a password. That's how 1-Click works. So 1-Click is different. I'm still not logged in, but I can make purchases and that's because 1-Click takes advantage of a process known as authorization. So we have identification and we have authorization and the way that this works with 1-Click is that I have enabled 1-Click on my machine to know that I want to be able to make purchases. I have to explicitly turn that on. Now I did it on my laptop, I did it years ago. So I have since forgotten that that is something that you set, but when I did that, it recorder that that machine is allowed to make purchases. If I go to a different device, even if I go to my phone and I haven't enabled 1-Click on that, I will not get that option. So this authorization is pretty key. And there are lots of ways that systems are authorized. For instance, one of the common patterns these days is after you've created an account, it then basically checks to see if you are who you really are.</p>
+		<p>
+			This email address, dtrump@trump.com is my airport wifi email address. When, you know, airport wifi always asks you for an email address and so this is the one I use currently. I used to use bgates@microsoft.com, but he's not getting as much mail anymore as this, but it just seems to work. And this is actually trying to go a step further. What this is trying to do is authenticate and the difference between identifying, authorizing and authenticating is, one says, "Okay, who are you?", the second one is, "Do you have permission to do this thing?", and the third one is, "Are you really who you say you are?". So this separation of identifying, authorizing and authenticating, this is actually really important, because from a design perspective, it gives us flexibility.</p>
+		<p>
+			We don't always need to authenticate. Sometimes we can get away, like Amazon did, with just identifying. Sometimes we just need to authorize, and the way we authorize is key. Now authenticating can be done in lots of different ways. Amazon never requires that I show a photo ID or prove that I am who I am, but they have an interesting way of making sure that if I create a new account there, that I in fact am who I am, because what they do is they take the purchase that I'm making ... because usually you create an account at Amazon at the time you make a purchase, so they take that information and they can check it against a variety of sources and make sure that I'm not on any bad problem list and that the bank thinks that my information matches which what I think make my information matches and they can keep this all under control.</p>
+		<p>
+			They can make sure that the credit card clears. They can do all sorts of interesting ... they even check IP addresses to make sure that that is where we think it should be, and all of this is designed. All of this is very intentional. And this goes back to the definition of design that I find the most appealing. This idea that design is the rendering of intent and by thinking about design as rendering intent, we can really start to look at how to take security apart. Let's take 1-Click for instance. 1-Click is a really interesting journey, because it takes place over what could be a really long period of time. Here's one of these journey maps that Jim was just talking about, and in this I've laid out sort of the key milestones that you'd do on Amazon when you're first setting up your account and then paying for the first product you make. Making another purchase, eventually enabling 1-Click and then making your first 1-Click purchase, and these can happen in a period of days or weeks or even years apart from each other. They can be really distant.</p>
+		<p>
+			And what Amazon has done is they've broken things up. When you first create your new account, you tell them who you are. They don't have any way of checking that's valid, but at the time they're like, "Okay, I'll believe you", and then you authorize the account when you give them a valid credit card payment, and they say, "Okay, the person's credit card worked, the security code on the back matched. It's not on our bad credit card list. We're going to go with this". So then they say, "Okay, this is a legitimate person", and then you go to enable 1-Click because they say, "Hey, you know there's this 1-Click thing. You can turn it on at any time". So you go to enable that and at that point they actually double check your credit card and pre-authorize you for future purchases.</p>
+		<p>
+			And once that's done, then as long as you are making a purchase from that machine and you send it to the address that you've put in for 1-Click, you are then authorized to make that purchase. And so these three things, identifications, authorizations, authentication, can be intentionally designed for us. So this is part of the palette that we can put together, that makes up the toolkit that we will use for design, and so this idea of playing with identifications, authorization, authentication gives us tools. Gives us flexibility. Now we have a conversation to have with the folks with the tinfoil hats to make sure to say, "Look, we can design something that is both usable and secure by creating this working system".</p>
+		<p>
+			Now the way 1-Click works, is you establish specific addresses to send to, and Amazon actually looks these addresses up to make sure they actually exist and provides checks against them, but their basic thinking is that you have to validate that this is the address that you want to send to. When you add a new address, they actually make you type in the credit card number again, because they think, "Okay, if you have the credit card to charge against this, it must be valid". So they require that you do that. So if someone breaks into your account, but they don't have your credit card, they can't actually add a new address and send a $20,000 camera to themselves instead of to you.</p>
+		<p>
+			That means that if suddenly at your house a $20,000 camera shows up, you can actually say, "Oh, I didn't order this", you call Amazon and say "Why are you sending me a $20,000 ... ". "Well it says you ordered it". "I didn't". "Okay, send it back". And they get their $20,000 camera back and you are not charged for this and everything works. And so this is basically how they manage risk. By locking you into this. It works differently though, for gift cards. Gift cards you can't purchase with 1-Click. You can make an immediate purchase, but you can't actually use 1-Click. When you go to purchase a gift card, they make you type in the credit card information again, because gift cards in essence are money laundering. They are currency.</p>
+		<p>
+			So if you could get this without realizing it, people could steal money from you easily. So they make sure that if you are purchasing a gift card, that that money ... because they can't have you ship it back right, if the money's spent, the money's spent. So at that point, they need that extra level of security and what these are, are threat models. What Amazon's done is they've created a threat model that looks at the risk of different types of purchases and they use the threat model as a tool to figure out how much security do they need to put up in the user's face at any given time. And so threat models are sort of the second part of our palette. We can use threat models to assess what the risk is and figure out exactly how to design the right thing. So now we have two parts of our palette.</p>
+		<p>
+			This is a 1970's era Ford Pinto and the Ford Pinto was know for two things. One is, it was especially designed to be leaned against. The second is, it was especially designed to explode on impact. The Ford Pinto became very famous for exploding on impact, such that it was really the first major recall of a car for safety reasons. This caused a chain of results that happened in the car industry that led to the creation ... there we go ... of the Volvo 900, and the Volvo 900 was probably the most safety forward car ever made. It was so safety rich that it's actually hard to list all the safety features on one page. The designers just kept adding in more and more and more safety into the product, and I was thinking about this because when we're talking about security, we are in essence talking about safety.</p>
+		<p>
+			We're talking about safety to the user, we're talking about safety to the business. So we're really talking about building safety systems. This 1-Click purchase screen has all these safety mechanisms built in and it's hardly noticeable that they are there, but they are there protecting the shopper, they're there protecting Amazon. And I started thinking about it, okay, how does safety systems work? Well, one part of the safety system is the seatbelt and seat belts are interesting, because they don't work if you don't wear them and the only way they can work is if you take action. So they actually put burden on the user. If the user does not buckle in the seatbelt, the seatbelt does not work. But contrast that to airbags. Airbags go into engage at the moment that you sit down in the seat and turn the car on.</p>
+		<p>
+			The airbag mechanism is actually fairly complex, it needs a fair amount of engagement, and therefore to power that thing and make sure that it's protecting you, it has to happen at the moment you sit down and turn on the car. But you don't have to do anything. It just automatically works. Airbags are different than the seatbelt, because the designers have actually embedded the burden into the system. The user is no longer burdened with this. An example of this is iMessage. If you have an Apple iOS device and you use iMessage, you probably have noticed that there are two types of bubbles that people talk to you with. Green ones and blue ones, and the difference between green and blue is actually encryption.</p>
+		<p>
+			Blue bubbles conversations are encrypted. They're encrypted with a key that's based on the phone. Apple doesn't even have a copy of the key, so Apple can never actually provide the conversation to an enforcement agency, because they can't decrypt it any better than anybody else can. You can only get access to this from the phone, and yet it's practically invisible to the user. Users do not know this exist. There is this constant key encryption, decryption process going on, there's key validation, they're all the things that happen with authentication and authorization, yet the user is completely separated from it. You log in once when you first set up the device with your iCloud password, and you are done. That's all that it takes.</p>
+		<p>
+			And this is the way that this works. If we want to make something safe, whether it's physically safe like a car or safe like a security system, we have to create burden, but the question is, "Do we place the burden on the user or do we place the burden in the system?". And if we're placing the burden on the user, there are some downsides to that. It can be really frustrating to have to constantly deal with engaging and using this system and it's very prone to making mistakes. It's very prone to The Compliance Budget, however if we build it into the system, that is more expensive. That raises costs and it's going to require that we be more innovative, and even though our management is always telling us we need to be more innovative, for some reason security is not the place they want us to innovate.</p>
+		<p>
+			So we have to fight this. And of course, even when we do the best job of embedding it in the system, unintended consequences still happen. Occasionally a Governor gets discovered that he's been having a sex scandal and he ends up in jail, but these things to some extent, just sort of happen. "Bless our hearts and other parts", that's one of my favorite sayings. It's very gubernatorial, just going to say it right there. But the thing that struck me about this dichotomy between burden on the user and burden in the system, is that when we put the burden on the user, any mistake is their fault. When the passenger doesn't buckle their seatbelt and they get into an accident and they're severely injured, they should've put their seatbelt on. It was their fault.</p>
+		<p>
+			But when we out it into the system, it's our fault right. The system didn't work. When the airbag doesn't go off, it's the manufacturers fault. So there's this tendency to want to put it on the user so that we don't have to be responsible. I mean that's how we get accounts locked, and we just say, "Hey, they couldn't remember their password. That's user error". User error is the opposite of empathy right. User error. That's not empathy at all. We keep talking about empathy and this is not it. So it's our responsibility to ask the question, "When should we be putting the burden on the users, and when should we embed it in the system?", because if we are serious about this empathy thing, this means that we have to make them safe without giving them more burden. That's the crux of The Compliance Budget.</p>
+		<p>
+			So it turns out that safety is the third part of our palette. It is the understanding where we put the burden, is part of our tool set. For the last part, we go to the airport, because the airport is a really interesting design. When you come to an airport, you start by going into the concourse area. Anybody can go into the concourse area. It's open to everybody, but in order to get beyond that, you have to go through security and once you go through security, the people who make it through that process, they can get to the gates. And of the people who get to the gates, they then have to go through another check for their boarding pass and they're allowed down the Jetway and on the plane.</p>
+		<p>
+			So there's this constant filtering, this constant process of making sure that you are where you need to be and in security, these are called perimeters. And perimeters are designed parts of the experience, they are specific things that we create and a security perimeter is a key piece of what we're trying to do. Back at Amazon they have a page that allows you to manage your account. It's filled with all sort of options and you can get to this page without putting in your password, which is really interesting because almost every enterprise system that has settings, requires that you authenticate to get access to your settings. But Amazon does not require that you authorize or authenticate in order to get there.</p>
+		<p>
+			They just require that you identify to get there and so once you are in there, you can see what all the option are and it isn't until you choose one, let's say looking at your orders, that it then asks you to authorize looking at your orders and asks you for a password. So we can use security perimeters as a tool. That authorization screen is a security perimeter. Only people authorized to get beyond that point can see what has been in the order history. So that gives us our fourth tool for our design palette and we can use this design palette to intentionally control the security user experience. So as I talked to folks, I get basically two answers as why we don't do this. One is, "Well, this is what we've always done" right, we do security the way we have always done it. And the other one is, "This is how everybody else does it, why should we be different?".</p>
+		<p>
+			Grace Hopper who invented the modern programming language, discovered the bug was fond of giving people pieces of wire that represented a nanosecond. She actually gave me one years ago and I wasn't smart enough to keep it. I worked with her at Digital Equipment Corporation. She once said that the most dangerous phrase in the English language is, "We've always done it this way", and that's how we tackle technology today and it provides horrible, horrible experiences. Let's start with passwords.</p>
+
+
+		<p>
+			<strong>(Video) Speaker 1:</strong> Hey Jimmy.</p>
+
+
+		<p>
+			<strong>Jimmy:</strong> Yeah.</p>
+
+
+		<p>
+			<strong>Speaker 1:</strong> What's the new wifi password?</p>
+
+
+		<p>
+			<strong>Jimmy:</strong> It's four words all uppercase.</p>
+
+
+		<p>
+			<strong>Speaker 1:</strong> Cool, what's the first word?</p>
+
+
+		<p>
+			<strong>Jimmy:</strong> No, it's just that. It's one word, all lowercase, four words all uppercase.</p>
+
+
+		<p>
+			<strong>Speaker 3:</strong> What? Is it one word or four words?</p>
+
+
+		<p>
+			<strong>Jimmy:</strong> It's four words, all uppercase, but there's one word in all lowercase.</p>
+
+
+		<p>
+			<strong>Speaker 1:</strong> Yeah dude, it's super easy. I don't understand what's the problem.</p>
+
+
+		<p>
+			<strong>Jimmy:</strong> Super easy.</p>
+
+
+		<p>
+			<strong>Speaker 3:</strong> So I'm typing F-O-U-R</p>
+
+
+		<p>
+			<strong>Jimmy:</strong> Yeah that's right.</p>
+
+
+		<p>
+			<strong>Speaker 3:</strong> W-O-R-D-S all caps.</p>
+
+
+		<p>
+			<strong>Jimmy:</strong> No, no, no. It's one word all lowercase. It's like any other wifi password.</p>
+
+
+		<p>
+			<strong>Speaker 1:</strong> No!</p>
+
+
+		<p>
+			<strong>Speaker 3:</strong> Okay, Jimmy, how many words are there?</p>
+
+
+		<p>
+			<strong>Jimmy:</strong> It's one word.</p>
+
+
+		<p>
+			<strong>Speaker 3:</strong> You said there were four words.</p>
+
+
+		<p>
+			<strong>Jimmy:</strong> There is four words.</p>
+
+
+		<p>
+			<strong>Speaker 1:</strong> Dude, I'm going to grab that router and just beat you to death.</p>
+
+
+		<p>
+			<strong>Speaker 3:</strong> Wait, what network am I even connecting to?</p>
+
+
+		<p>
+			<strong>Jimmy:</strong> Rocketjump5G.</p>
+
+
+		<p>
+			<strong>Speaker 3:</strong> What? I'm done. I'm going to type O-N-E-</p>
+
+
+		<p>
+			<strong>Jimmy:</strong> No! It's four words all uppercase.</p>
+
+
+		<p>
+			<strong>Speaker 3:</strong> Why four words Jimmy?</p>
+
+
+		<p>
+			<strong>Jimmy:</strong> Not words, word. It's four words all uppercase, one word all lowercase!</p>
+
+
+		<p>
+			<strong>Speaker 1:</strong> I'm just going to jerk off later.</p>
+
+
+		<p>
+			<strong>Jared Spool:</strong> That's a Compliance Budget. I asked people to send me the rules that their systems use and passwords. One lovely person from Oracle sent me four separate versions that different systems that they use everyday require with slightly different rules that make it impossible to have one password that works on everything and therefore they have the keep track of all the different variations to remember which password work with which thing for which they have to change them every 30 days, and this is crazy right? I mean look at these rules. Password must not contain dictionary word, must be longer than 12 characters though here it can't be longer than 32 characters. Why there's a maximum, I don't even know. Must be at least eighth characters long. Must have one numeric character, one uppercase letter, password must not be one of one previous passwords. Your password must contain at least two female characters who can talk about something other than a man.</p>
+		<p>
+			World's collide. And so passwords have become this sort of fetish. We fetishize over password strength. We spend so much time trying to think about password strength. What is the best way to actually deal with this and the reality is, is that it doesn't matter right, because the way that people got their passwords stolen from OPM was not because someones password wasn't strong enough. It's because the office of Personnel Management left the database open to an SQL injection. It was the back end. You can have the strongest passwords in the world, it ain't going to make a difference. Spammers went through River City Media's entire operation, because they were able to actually just get to the backups which were stored on publicly available servers.</p>
+		<p>
+			And Motherboard reported that Dropbox lost data on 60 million users, because someone was able to hack into an open port. There's a teddy bear that allowed people to actually get two million records stolen. The way they did this was, they used a database that actually is know, in it's default settings not being protected, and it's on this particular port on the internet and hackers just write programs to test every possible IP address for that port and when it comes back with a prompt, what they do is they actually copy all the data out, they erase it and they put in a note saying, "If you pay us half a million dollars, we will give you your data back". This had happened twice to the database company before the hackers gave up and just published the damn records on the internet, and so it's not because people's passwords aren't strong enough.</p>
+		<p>
+			The IRS, almost all the identity theft that happens with the IRS isn't because people's passwords aren't strong enough, it's because people tell them the passwords. It's the passwords that are doing this and you say, "Okay, well this is just people who don't know anything about the internet. They're the ones who are the biggest victims", and they are the biggest victims only because there are more of them than there are of us. But it actually doesn't matter because most people cannot pick out phishing right. Here's a log in from Google, here's another log in from Google, here's another log in from Google, here's another log in from Google. Can you tell me which one of those was the fraudulent one? Because I bet you can't. The one on the left is legit. The one on the right is a phishing attack and they are almost completely identical and it would not take a lot of work of the programmers to make them identical.</p>
+		<p>
+			They just missed a detail or two, and the thing is, is that you can't even look at the address bar because it is designed to be completely obscure and it looks just like it should look when you are validating, and what they do is they send you an attachment that looks like an email that you want to open. You click on that attachment and it comes from someone you know, because that person has already been hacked and they're going through the contact database. So you get this email from someone you know that has this attachment, you click on the attachment to see what it is, it asks you to log into your account and within minutes everybody you know is getting that same email, because they have pretty much locked you out of your account. Within seconds they change your password on your Gmail account and then they spam and phish everybody who you've ever sent an email to. That's the hook and everybody falls for this.</p>
+		<p>
+			Now if you do the math on a brute force dictionary attack, if you have a 15 character password, it will actually take three to four days to break your password with the fastest computers at about a 1,000 tries per second. It would take three to four days to do that. Phishing takes a minute. So no one's trying to brute force your damn account. It's too expensive. Why would we do that? We'll just phish and we'll keep phishing. So if passwords don't work, we have to use something else and there are certainly lots of options available to us. We could type things in, we can get our eyes scanned-</p>
+
+
+		<p>
+			<strong>(Video) Speaker 4:</strong> Edna mode ... and guest.</p>
+
+
+		<p>
+			<strong>Jared Spool:</strong> We can pretty much authenticate and this is where things like Two-factor authentication comes in. Two-factor authentication is the technique we use to not just use a single authorization password, but to actually authenticate based on two separate things. It can be something you know, something you have or something you are. You know, a card, biometrics or as Dan Kaminsky likes to say, "Something you've forgotten and something you've lost", and these systems are getting more and more sophisticated right. We can use biometrics. This is a biometric ID card that requires a password right. So here there are two different ways you can get in and you have to be the person who has the same fingerprint or knows that code if the fingerprint isn't working to go in.</p>
+		<p>
+			So it's something you know, something you have, something you are. Now Two-factor authentication is very jargony, so companies use it and they don't really know what they mean and they start doing things that don't make sense like the good folks at United who claim this was Two-factor authentication, when it's just security questions. Security questions are not Two-factor authentication, they're just One-factor authentication done a second time. It's basically another password and United went so far as to say that this was extra secure because you didn't get to pick your question. They picked the question for you and they also provide all the possible answers for you. This question being, "What's your favorite pizza topping?", has such classics as, "Barbecue chicken, sausage, shrimp/prawns ... ", and my favorite, "... mashed potatoes", and they actually bothered to put on their FAQ on their website, "Do people really eat mashed potatoes on pizza?", for which they claim in Chicago they do.</p>
+		<p>
+			I believe this screen was the product of mashed potato eating pizza eaters, and guess what? Nobody remembers their security questions and if you can't answer the security question, your account gets locked and when your account gets locked you have to call support which costs them millions of dollars a year. And the system isn't any more secure than it has ever been, and the reason these things keep happening is because of these people, right. They think this is more secure, but as we know, if it's not usable it's not secure. And then there's all these other little things that are coming up, like Olaf. Olaf is this thing where you log in with someone else's authentication system. So instead of using your own username and password, or the one you've established with this system, you use someone else's and that great right, because it means that medium in this case doesn't have to know your username and password which means that they can't breach it right?</p>
+		<p>
+			The only people who can breach it are Twitter and Facebook and they will, and when they do, whoever gets your Facebook password can now have access to everything you have authenticated with Olaf. So you get the whole shebang and I just want to point out that the guy who created Facebook wears a hoodie. So we have to just assume from the get go, that passwords will never ever make us secure and we have to start designing systems that go beyond this. Now in a sort of unrelated thing, the way we'd start designing this, is of course with a user story and the most common user story in the world is, as a user I want to log in. I actually typed that phrase into Google and got thousands of responses. Every Agile Training Course uses this as the canonical story. So every developer grows up believing that this is a real user story.</p>
+		<p>
+			As a user I want to log in. Nobody wants to log in. Nobody wakes up in the morning and says, "It's going to be a great day. I get to log in 23 times", as a recent study from the National Institute of Standards and Technology published. That the average federal employee has to authenticate with the system 23 times during their day, including every time they get up and go away for 15 minutes, the system automatically logs them out. The other day I decide to try an experiment and for a 24 hour period I counted how many times I had to authenticate and I authenticated 51 times, according to my little notebook. I kept a little tag sheet and did a little diary study on myself, 51 times, and by the way that particular day I spent 6 hours on an airplane and I still managed to have to log into something 51 times.</p>
+		<p>
+			Now granted, the majority of those things where on my phone. Logging in to open my phone or logging in to open my laptop, but the reality was, was that they were only about a third of the total number of systems that I logged into and so it's crazy how much we make people do this. And so we can start to track this. We can start to keep track of this and the tool that Jim talked about, the one that we teach people at Center Center or school to use, is the customer journey and the funny things is, is that when I see customer journeys that are laid out in terms of the steps that people use to accomplish a task, it almost never has logging in. Where does that happen here? Where is the security part of this? So we have to start taking this stuff and saying, "Okay, if we're going to start measuring the frustration and delight for this experience, we need to be honest with ourselves and start putting in, where's the log in? Where does that happen? And is it the happy path?".</p>
+		<p>
+			Is it, you know, yeah, user just logged in. How hard can that be right? And instead teams need to start making all the journeys. What is the journey when the username and password is recalled correctly versus what is the journey when the user comes back to their machine and their session hasn't expires versus what is the journey when they come back to the session and it has expired and now they have to go back through logging in versus what is the journey when they have the correct username, but they can't remember what the password is, versus what is the journey when they tried a little too hard and they got locked out of their Taco Bell account versus what is the journey when they can't remember either the username or the password because they've had three or four email addresses since they've first established this account and they can't remember which one they used and which of their favorite emails they tried to use.</p>
+		<p>
+			And we can see this and we can watch it and we can see the behavior happening. You know one of the things you find in user research is that you can put the password rules up on the screen and they won't pay attention to it, because the first thing they always try the do is type in the password that they are trying to always use everywhere and if that works, they will not care whether it meets the rules or not. If it doesn't, then they'll read the rules to figure out where it was violated and they'll swear. Immediately you'll see a detachment in frustration. You see the journey dip, because they have this thing and we even see this with the experience of users now using password reset as their default log in. Why do we need to remember passwords if I can just say send me a link to click on in my email and make it happen, and this is so common that applications like Slack make this the default path.</p>
+		<p>
+			You can actually not have to remember your password and they just press a button and they put a link in your email and you log in that way. So we can get creative and we can start to use this information to create designs. PayPal had a problem with accounts getting locked. Something would happen, they would think that the account wasn't working and they would lock it and anybody who was a PayPal vendor who had their account locked was completely frustrated, because the process of proving to PayPal you were legit, was incredible and this went on for years and it finally stopped because of this guy. And it stopped because this guy was a PayPal user and he's account got locked and the reason he was able to make it stop, was at the same time he was the CEO of PayPal. It took him two weeks to get his account unlocked. Guess what they fixed?</p>
+		<p>
+			When we point out the journeys, we need to bring them home. We need to make them real, because that's what gets things happening and as Kate mentioned, we need to measure things. Tom Peters once said, "That which gets measured, gets done". At least I think it was Tom Peters. It could've been Peter Drucker. Actually no, I think it was Edward Deming. Maybe it was Lord Kelvin? One of them said, "That which gets measured, gets done". So we can start to measure UX metrics. What are the metrics around Security UX? First, how many security related messages do you issue in a day? Do you know what your most popular error messages are? Do you know where the security related ones are relative to that? If you are not measuring error messages, you are leaving a tremendous amount of insight on the table, because every error message is a moment that a user is frustrated.</p>
+		<p>
+			So this is clear documentation of exactly where you're frustrating your users and why. So start by looking at security error messages and there's a bunch of them right. Username and password doesn't match, locked account, session timeout, all of these things you can count and because you can count them you can start to report them and you can start to look for patterns as to when they show up and you can start to see in the lab, what happens hen people encounter them and you can start to report those stories and socialize that data. We can also talk about password requests. How often do people request passwords right? This number is astronomical for most systems. So how often does this happen? One company that I worked with was having hundreds of millions of dollars lost because of security issues and they didn't know that it was often because of password requests that failed. And they didn't know that because, while they measured with Google Analytics every page, the tinfoil hat people didn't trust Google Analytics, so nothing that asked for a password was measured.</p>
+		<p>
+			So nobody knew that the page that requested your username and password was actually the most visited page on the site. Three times more than any page that actually led to it, because the average user was visiting it three times to unlock their password and that the second most visited page was request my password to be send to me in email. Those were the two most popular pages on the site, but nobody knew it because analytics wasn't counting it. Analytics wasn't counting it because the people with the tinfoil hats didn't trust Google. I don't blame them for not trusting Google, but still. You can count things without Google. Computers know how to do this and so that's key. What percentage of password resets actually come back with a legitimate reset?</p>
+		<p>
+			That's usually a very small percentage, which means you have a lot of people asking for resets that are not completing them and the vast majority of them are actually legitimate users or customers who are now not able to use it for their work, which is why Compliance Budgets get hit. And finally, what sort of productivity lost are you seeing? The Dartmouth study is worth looking at, the healthcare study, because their method was brilliant. They went into hospitals and they watched people. Yogi Bear once said that, "You can observe a lot by just watching". I think that's brilliant. Of course the same dude said, "When you come to a fork in the road, you should take it". I'm still working on that one. We can use the methods we have, user research, journey mapping, now metrics. These methods can tell us what's actually happening with our users. The amount of frustration that the security that we have, is creating. We can then be innovative.</p>
+		<p>
+			We don't have to do anything amazing. We can just make it happen and we don't have to keep doing things the way that we've always done them. So this is what I came to talk to you about. If it's not usable, it's definitely not secure. This is your gateway to the people with the tinfoil hats, because they care about security. So you just keep repeating it until they say it and then you can say, "Okay, we can make it more usable". We can figure out where we burden our users. We can do VIP class experiences like Amazon does by delighting our users by spreading the burden across the entire experience and embedding it as much into the system as possible. And we can make better, safer experiences for our organization and our users.</p>
+		<p>
+			So that's what I came to talk to you about. If you found this the least bit interesting, I'm ... been writing about this and will continue to write about this at uie.com. If we are not connected on LinkedIn, please by all means connect on LinkedIn. Sometimes LinkedIn requires you to authenticate that you are allowed to connect to me, and you can use may email address to do that and finally, you can follow me on the Twitters where I tweet about design, security design, design education, design strategy and currently a favorite topic is the amazing new adaptations that our government uses to interpret the constitution. And I also want to talk about, for a moment, Center Center. This is a school that we've created in Chattanooga, Tennessee. This is probably my biggest project right now. As I mentioned we have our first cohort going through. We are looking for students for our second cohort.</p>
+		<p>
+			So if you know somebody who is thinking about becoming a great designer, I would like to talk to them and we can see if this program will be great for them, but the other thing we're going to need is we need projects for the students to work on, because one of the things that the students do, is they spend two thirds of their time practicing what they're learning on real projects. So we take projects from companies, back burner projects that you would like to get done but for whatever reason don't come to the top. But if you got them done it would be good, and we have the students work on it and part of the deal is they work on these projects for four of five months. So there's a significant amount of hours. The average amount of hours that the students put into a project combined is about 25 hundred hours, which is actually more than the length of the entire general assembly program, but every student that goes through the program would do five to eight of these over their two years in the program.</p>
+		<p>
+			And these are projects where they take from design through deployment. So we work with your developers and we actually get it built and then they get to see how it gets used and they get to find out all the constraints and things that you run into when you try and ship something, so that's part of it. So we need projects, so if you think your company could have projects for our students to work on, I would like to talk to you about that too, and of course the first cohort graduates in October of 2018 and they're going to be looking for jobs and I think there's going to be a bidding war over them, but you can get in on that if you want. The companies that give us projects are the ones that are sort of scouting the students. That's the whole point. So you get to see the students and then they get to see this. So please by all means talk to me about that too.</p>
+		<p>
+			Okay, we have gotten to the end of the day. We have some time for questions I think. Yes, we do. So we'll do this for a few minutes. So our volunteers ... I see Morgan has one in the back there. Is that mic working?</p>
+
+
+		<p>
+			<strong>Speaker 5:</strong> Testing testing.</p>
+
+
+		<p>
+			<strong>Jared Spool:</strong> Yes. Okay. Give that to Morgan there. Way in the back I think, or no?</p>
+
+
+		<p>
+			<strong>Speaker 5:</strong> Okay cool.</p>
+
+
+		<p>
+			<strong>Jared Spool:</strong> Yes.</p>
+
+
+		<p>
+			<strong>Speaker 5:</strong> I'm sorry Morgan.</p>
+
+
+		<p>
+			<strong>Jared Spool:</strong> And everybody else, raise your hand an one of the volunteers will come over to you.</p>
+
+
+		<p>
+			<strong>Audience:</strong> Hi there.</p>
+
+
+		<p>
+			<strong>Jared Spool:</strong> Hey there, how are you doing?</p>
+
+
+		<p>
+			<strong>Audience:</strong> Good. How are you doing? I was curious. You were talking in that example with the car about embedding within a system or putting the burden on the user, but the interesting sort of double edged sword of that when you embed you also take away user control and I was curious if you could speak a little bit about the pros and cons or sort of how those design decisions are made. Yeah.</p>
+
+
+		<p>
+			<strong>Jared Spool:</strong> Yeah, I mean you're always got trade-offs in design and you know I live in Massachusetts which is just south of a state that puts, "Live free or die" on there license plates, which by the way are made by prisoners, and they are very much about having control and deciding whether they're allowed to kill themselves on their own. So they don't wear motorcycle helmets and they don't have bicycle helmets and I don't understand why they're just put into their tolbooths little bars that go up that people keep running through them because they don't trust them.</p>
+		<p>
+			And I get this desire to have choice, but I'm not sure that the people who are choosing are the people who understand the choice best, and so part of our job as designers ... and this is to some extent what Chris was talking about earlier, is to help people make better decisions and therefor removing some choice is often the right way to solve that problem. It's not always the the right way, but it's often the right way. But we have to deal with that very deliberately and very intentionally. So this decision of embedding something in the system versus burdening the user, that's something we have to be very careful about and it can backfire. So we have to very much evaluate the effects of our decisions and do things like go into the hospitals and see what happens with patient care because of the decisions that we made. So absolutely. Yes sir.</p>
+
+
+		<p>
+			<strong>Audience:</strong> I've seen samples of non traditional passwords more commonly in like a Captcha, you know, prove you're not a robot that kind of thing.</p>
+
+
+		<p>
+			<strong>Jared Spool:</strong> Right.</p>
+
+
+		<p>
+			<strong>Audience:</strong> Have you seen or experience or thought of ... or what are your thoughts on non traditional security like in place of passwords essentially? So for example you were told to select one of these images, which of these images is the one that is yours, instead of what is your password. Something that's just simpler, more easily memorable, but just really different. Have you seen anything like that-</p>
+
+
+		<p>
+			<strong>Jared Spool:</strong> Yeah, so Captcha is really not an authentication system. It's just an anti-spam device. So Captcha just is trying to ... it's funny because all the new Captcha systems are based on machine learning and all the things that are basically getting around the Captcha systems are based on machine learning. So the robot wars have started. So what we have done is we've juts sort of triggered this escalation where they're going to start letting computers design Captcha systems and then they're going to defeat them and then they're going to ... you know, and pretty soon it won't be about us at all. It's just about who's the better Captcha King.</p>
+		<p>
+			And that's what your baby monitor is calculating, when you're not home, is other people's Captcha stuff, because as you know the internet of things is just other people's computers in your house. But there have been all these different attempts at trying to do something that is non keyboard right, because the worst thing you can ever do is type a password into something. So if we can create a security system that doesn't involve typing a password into it, that's going to level up security quite a bit because passwords can be captured and intercepted and phished and all those things. So banks and other things for a while were experimenting with images. So you would pick an image when you established the account and then it would show you that image out of a set and you have to tell them which image it is.</p>
+		<p>
+			That's assumes you remember which image out of the account it was. In some cases they would let you upload an image, but it turns out that that uploading of the image thing can be social engineered so that doesn't help you and the problem is this is not at all accessible to people who can't see the pictures. And it also doesn't work on a variety of devices where the pictures all can't be displayed or they can't be displayed in their original resolution or they're there and so those systems tend to fail. Where I think there's hope, is if you sort of combine what happens with Olaf with what's happening with password vaults, you get this interesting sort of single sign on thing. So their password vaults are things like 1Password or LastPass. They are encrypted databases of passwords that live on the local device.</p>
+		<p>
+			Now that's risky, because if you lose the local device you no longer have all your passwords. So what the new systems do, is that they synchronize over the Cloud, but they're all encrypted. So you can get the password file, but there's nothing that you're going to be able to do with it, it's encrypted quite strongly. So that's not the issue, but the way those systems work is you type in the password you remember. You only need to remember one. It has all your other passwords and in fact, you can let those systems like 1Password generate your passwords for the other systems. So I use 1Password. I do not know what my password for LinkedIn in. I don't know what my password for Twitter is. I don't know what my password for Skype is.</p>
+		<p>
+			So all those systems I require using 1Password and I have 1Password on every possible device and I have it backed up. So I can get to it if something fails, but I don't know what my passwords are. But the thing is, is that every time Skype or LinkedIn or Twitter ask me for a password, I tell 1Password to pretend I'm typing it and type it in, which means it can phished or it can be caught by a man-in-the-middle attack or some other security threat. What if we got rid of that typing, because that's not secure? What if we actually use an encrypted end-to-end pipe to get from 1 Password to Twitter? That's how Olaf works essentially. What if we just bypass the typing and we use that end-to-end encryption? Now suddenly I've got encryption all the way through the system from a password that I don't even know and in fact, you could combine that with a second factor thing like the way they calculate RSA keys.</p>
+		<p>
+			If you've ever had an RSA fob, it's this number that changes every 60 seconds. That number that changes every 60 seconds is basically a password that is generated off of a seed. All you need to know is the encryption key for the seed and the time established for the sequence and you can generate the key and validate against it, bit the only parties that know that are you and the person you're trying to authenticate with. Nobody else can get access to that and so as a result you could use something like that. So my password for Twitter would actually change every 60 seconds. My password for Skype would change every 60 seconds. It would be communicated in this authenticate thing, so even if it was captured without knowing the seed and start time, you couldn't figure out what the next password would be 60 seconds later.</p>
+		<p>
+			So you have a very small window of attention. I think that's where we're going end up. There are single sign on systems that are used inside organizations that most we do that right now, those things are happening. There's even one that being sold by a company, called Improvita I think is the name of it, that is sold into the healthcare world to basically do single sign on, but you have to have all the vendors map up and use standards which vendors do that when given enough reason. So if we can show the burden, we can make it happen. We can actually get to that point where there really aren't any passwords.</p>
+		<p>
+			Use your thumbprint, biometric, that's the first factor. You have the physical device, that's the second factor. So suddenly something you have, something you are, gets you into the system. That's sets off and allows you to log into everything else. That's probably the most secure we can do today and it's not hard to design. All the pieces are there. All the parts are there. We just have to start to build it. Behind you Kim. There you go. Back here, well, yes. It's the trickiest microphone in the world.</p>
+
+
+		<p>
+			<strong>Audience:</strong> Your talk was very inspirational, especially I'm working for the security software company. It's been like two years and I learn a lot and the way of the security software company is like basically create the products to measure that how secure the server is. Your assets are, but the way of the you give the scores based on these policies, created by the government and all these policies pretty old.</p>
+		<p>
+			And so like when you talk about this, you use your [inaudible 01:18:59], like wow, the passwords really not the way of like ... they bring so much burden that the users ... government is doing this, and so I felt like it will be great if you can share this information at a IT conference or at the congress level. They need to be educated how trouble ... how much pain we're creating, wasting money across the countries, over the industries. I thought this is great information. So yeah.</p>
+
+
+		<p>
+			<strong>Jared Spool:</strong> Well, I'm all for saving tax payer money and I know that there's actually been significant work done on this inside government, but at the same time government has made it a tradition to not worry too much about burden on the citizen. So I think there's definitely a will inside, particularly the Federal Government of the US, to start to update these policies and make it happen. But the way that the CIO structure works in the agencies and now they have CSO, Chief Security Officers, that are very much focused on protecting internal assets and not so much about making experiences good. That education still needs to happen and I will say that I was more hopeful about a year ago than I am now in terms of a top down approach to this, because until Twitter is hacked, I don't think we're going to care.</p>
+		<p>
+			And it has to be hacked sometime between two and four in the morning I think for it to make a difference. So as was pointed out the other day, the dude makes those tweets while he's sober at three in the morning. Who tweets at three in the morning while they're sober? That's what I want to know. Actually I do know. So do we have one more? Yes, we have one more. Okay. This is the last question of the day, so you know, no pressure. Audience: I'm going to go home then. So one thing I kept thinking about while you were talking about logging in to your machine or having something on you. One thing that I've ... and I guess I'm just asking to comment here what you think, how you think this is headed, that I really enjoy, is with my Apple watch on, I can easily log into my computer and just wake it up and boom, like it's there.</p>
+
+
+		<p>
+			<strong>Jared Spool:</strong> Right. So this is what I was talking about earlier right, you authenticate with your watch by using biometrics right? The watch will only do it while it's on you and used biometrics to authenticate with the watch, which then allows you to actually just wave your hand near your computer and log in and then you can use Touch ID to actually log into any other system. So you're not typing any passwords. If you have a password vault enabled on your MacBook, you're not typing any passwords into anything. The phone enables the watch, the watch enables the pc and the system just works. The whole environment is there. This is, while this is proprietary to Apple at this point, there is nothing about it that could not be made into a standard that platform share that give that same level of security.</p>
+
+
+		<p>
+			<strong>Audience:</strong> Right.</p>
+
+
+		<p>
+			<strong>Jared Spool:</strong> And so I think we're really close and we just have to keep saying, "If it's not usable, it's not secure", and keep pushing and showing the frustration and pain and monetary loss that is happening from very frustrating poor experiences. If we can keep the pressure on that, and we are the ones who have to deliver that message to the rest of the organization. They're not going to come up with it on their own. We have a reception to go to. It's upstairs on the 23rd floor. I will see you there. Ladies and gentleman, thank you very much for encouraging my behavior.</p>
+
+
+</div> <!-- Closes "article" -->
+
+</div> <!-- Closes "container" -->
+
+
+</body></html>

@@ -1,0 +1,78 @@
+
+
+
+/* line 171, ../../src/scss/landing-page.scss */
+footer.global {
+	padding: 1.78571428571429em 2em 0.85714285714286em 2em;
+  padding-bottom: 1.5em;
+	background: #222;
+	color: #fff;
+	font-size: 14px;
+  margin-top: 2.5em }
+/* line 177, ../../src/scss/landing-page.scss */
+footer.global .logo,
+footer.global .ie-logo {
+	display: block;
+	margin-bottom: 0.42857142857143em;
+	float: left;
+	height: 3.6em;
+	width: 6.24586466165418em; }
+/* line 185, ../../src/scss/landing-page.scss */
+footer.global a {
+	color: #dd6b68; }
+//Class for phone links in footer
+footer.global a.phone-link {
+	color: white; }
+/* line 189, ../../src/scss/landing-page.scss */
+footer.global .small {
+	color: #555;
+	font-size: 1em; }
+/* line 194, ../../src/scss/landing-page.scss */
+footer.global .uie {
+	padding: 1.78571428571429em 4% 2em 4em;
+	margin: -1.78571428571429em 0 -0.85714285714286em -4em;
+	line-height: 1.71428571428571;
+	float: left; }
+/* line 200, ../../src/scss/landing-page.scss */
+footer.global .uie span {
+	color: #dd6b68;
+	margin: 0 0.3125em; }
+/* line 205, ../../src/scss/landing-page.scss */
+footer.global .uie p {
+	margin-left: 112px; }
+/* line 210, ../../src/scss/landing-page.scss */
+footer.global .footer-about {
+	float: right; }
+@media screen and (max-width: 660px) {
+	/* line 171, ../../src/scss/landing-page.scss */
+	footer.global {
+		padding-bottom: 2em; }
+	/* line 217, ../../src/scss/landing-page.scss */
+	footer.global .footer-about {
+		margin-left: 0;
+		padding-left: 0;
+		clear: both;
+		float: none; }
+	/* line 224, ../../src/scss/landing-page.scss */
+	footer.global .footer-about,
+	footer.global .uie {
+		width: 23.14285714285714em;
+		margin: 0 auto;
+		float: none;
+		padding: 0; }
+	/* line 232, ../../src/scss/landing-page.scss */
+	footer.global .uie p {
+		margin-bottom: 0.75em; } }
+
+@media screen and (max-width: 500px) {
+		//Makes phone link red on small screen size
+		footer.global a.phone-link {
+			color: #dd6b68; } }
+
+@media screen and (max-width: 400px) {
+	/* line 171, ../../src/scss/landing-page.scss */
+	footer.global {
+		font-size: 12px; }
+	/* line 240, ../../src/scss/landing-page.scss */
+	footer.global .uie p {
+		margin-left: 96px; } }
